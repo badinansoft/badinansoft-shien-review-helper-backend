@@ -78,7 +78,7 @@ class LicenseController extends Controller
             $images = Image::where('status', ContentStatus::ACTIVE->value)
                 ->orderBy('used_count', 'asc')  // Sort by usage count, ascending
                 ->limit(6)
-                ->get(['id', 'name', 'path', 'mime_type']);
+                ->get(['id', 'path']);
 
             // Optimize: Update used_count for all comments in a single query using whereIn
             if ($comments->isNotEmpty()) {
