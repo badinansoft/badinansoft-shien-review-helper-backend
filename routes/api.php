@@ -16,7 +16,7 @@ Route::middleware(['check.license'])->group(function () {
     Route::post('/get-content', [LicenseController::class, 'getContent']);
 
     Route::post('/log-usage', [LicenseController::class, 'logUsage']);
-    Route::post('/test-api', [LicenseController::class, 'testApi']);
 });
 
+Route::post('/test-api', [LicenseController::class, 'testApi']);
 Route::post('/license-stats', [LicenseController::class, 'getLicenseStats']);
