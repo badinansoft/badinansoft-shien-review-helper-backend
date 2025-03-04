@@ -13,7 +13,7 @@ class GenerateComments extends Command
     /**
      * @var string
      */
-    protected $signature = 'comments:generate {count=50 : Number of comments to generate}';
+    protected $signature = 'comments:generate {count=80 : Number of comments to generate}';
 
     /**
      * @var string
@@ -28,7 +28,7 @@ class GenerateComments extends Command
      *
      * @var int
      */
-    protected int $batchSize = 25;
+    protected int $batchSize = 40;
 
     /**
      * Execute the console command.
